@@ -10,7 +10,7 @@ using namespace std;
 using namespace test;
 
 void construct_test(Test &test) {
-    
+
 }
 
 int main() {
