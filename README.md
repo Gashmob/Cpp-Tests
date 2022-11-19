@@ -109,3 +109,8 @@ List of `it_<a>_<b>`
 - it_pass_skip
 - it_fail_skip
 - it_skip_skip
+
+## Tests
+
+All tests are run for each push via [GitHub Actions](https://github.com/Gashmob/Cpp-Tests/actions) on Ubuntu and macOS.
+The tests sources are located in `tests/test.cpp`. You can run the tests by building the `test` target.
