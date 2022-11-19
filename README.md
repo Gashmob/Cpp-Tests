@@ -1,5 +1,7 @@
 # C++ Test
 
+[![Tests](https://github.com/Gashmob/Cpp-Tests/actions/workflows/test.yml/badge.svg)](https://github.com/Gashmob/Cpp-Tests/actions/workflows/test.yml)
+
 This is a little framework to do tests in C++.
 
 ## Installation
