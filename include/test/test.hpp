@@ -1,3 +1,9 @@
+/**
+ *     == C++ Test ===
+ * Created by Kevin Traini
+ *      Under GPL-3.0
+ * -----------------------
+ */
 #ifndef TEST_HPP
 #define TEST_HPP
 
