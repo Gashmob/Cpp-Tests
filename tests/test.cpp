@@ -138,46 +138,126 @@ void construct_test(Test &test) {
 
     test.describe("Shoulds", []() {
         it_pass_fail("should_equal", []() {
-            return SKIP;
+            should_equal(1, 1)
+
+            should_equal(1.5f, 1.5f)
+
+            should_equal('a', 'a')
+
+            should_equal(string("Hello"), string("Hello"))
+
+            should_equal(true, true)
+
+            should_equal(false, false)
+
+            return PASS;
         })
 
         it_pass_fail("should_not_equal", []() {
-            return SKIP;
+            should_not_equal(1, 2)
+
+            should_not_equal(1.5f, 2.5f)
+
+            should_not_equal('a', 'b')
+
+            should_not_equal(string("Hello"), string("World"))
+
+            should_not_equal(true, false)
+
+            should_not_equal(false, true)
+
+            return PASS;
         })
 
         it_pass_fail("should_less", []() {
-            return SKIP;
+            should_less(1, 2)
+
+            should_less(1.5f, 2.5f)
+
+            should_less('a', 'b')
+
+            should_less(string("Hello"), string("World"))
+
+            return PASS;
         })
 
         it_pass_fail("should_great", []() {
-            return SKIP;
+            should_great(2, 1)
+
+            should_great(2.5f, 1.5f)
+
+            should_great('b', 'a')
+
+            should_great(string("World"), string("Hello"))
+
+            return PASS;
         })
 
         it_pass_fail("should_less_equal", []() {
-            return SKIP;
+            should_less_equal(1, 2)
+            should_less_equal(1, 1)
+
+            should_less_equal(1.5f, 2.5f)
+            should_less_equal(1.5f, 1.5f)
+
+            should_less_equal('a', 'b')
+            should_less_equal('a', 'a')
+
+            should_less_equal(string("Hello"), string("World"))
+            should_less_equal(string("Hello"), string("Hello"))
+
+            return PASS;
         })
 
         it_pass_fail("should_great_equal", []() {
-            return SKIP;
+            should_great_equal(2, 1)
+            should_great_equal(2, 2)
+
+            should_great_equal(2.5f, 1.5f)
+            should_great_equal(2.5f, 2.5f)
+
+            should_great_equal('b', 'a')
+            should_great_equal('b', 'b')
+
+            should_great_equal(string("World"), string("Hello"))
+            should_great_equal(string("World"), string("World"))
+
+            return PASS;
         })
 
         it_pass_fail("should_true", []() {
-            return SKIP;
+            should_true(true)
+
+            should_true(1 == 1)
+
+            return PASS;
         })
 
         it_pass_fail("should_false", []() {
-            return SKIP;
+            should_false(false)
+
+            should_false(1 == 2)
+
+            return PASS;
         })
 
         it_pass_fail("should_empty", []() {
-            return SKIP;
+            should_empty(string(""))
+
+            should_empty(vector<int>())
+
+            return PASS;
         })
 
         it_pass_fail("should_not_empty", []() {
-            return SKIP;
+            should_not_empty(string("Hello"))
+
+            should_not_empty(vector<int>({1, 2, 3}))
+
+            return PASS;
         })
 
-        return SKIP;
+        return PASS;
     });
 }
 
