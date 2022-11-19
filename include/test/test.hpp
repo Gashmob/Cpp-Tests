@@ -330,7 +330,7 @@ namespace test {
 /**
  * Assert that a is true
  */
-#define assert_true(a) if (!a) { return test::FAIL; }
+#define assert_true(a) if (!(a)) { return test::FAIL; }
 /**
  * Assert that a is false
  */
@@ -342,7 +342,7 @@ namespace test {
 /**
  * Assert that a is not empty
  */
-#define assert_not_empty(a) if (!a.empty()) { return test::FAIL; }
+#define assert_not_empty(a) if (a.empty()) { return test::FAIL; }
 
 // ====================
 // Should (SKIP if false)
@@ -374,7 +374,7 @@ namespace test {
 /**
  * a should be true
  */
-#define should_true(a) if (!a) { return test::SKIP; }
+#define should_true(a) if (!(a)) { return test::SKIP; }
 /**
  * a should be false
  */
